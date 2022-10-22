@@ -44,4 +44,9 @@ public class TopicController {
         topicService.updateTopic(id, topic);
     }
 
+    @RequestMapping(value = "/topics/{query}", method = RequestMethod.DELETE)
+    public void deleteTopic(@PathVariable("query") String id) {
+        topicService.deleteTopic(id);
+    }
+
 }
